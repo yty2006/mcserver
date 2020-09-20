@@ -1,0 +1,135 @@
+# This is the main configuration file for Mohist.
+# 
+# Home: https://www.mohist.red/
+# 
+# Setting: entity-tick-limit Default: 300   # Entity maximum tick limit, entities exceeding this value will not be updated
+# Setting: hidejoinmodslist Default: false   # Hide the list of mods displayed on the console when players join the server
+# Setting: forge.modswhitelist.kickmessage Default: Use of unauthorized mods   # mods white-list kick Message
+# Setting: mohist.check_update Default: true   # Check the version update status of the main program
+# Setting: eventCanceled.explosion Default: false   # BlockExplosionEvent isCanceled
+# Setting: consolecolor.info-time Default: b   # consolecolor.info-time
+# Setting: libraries_black_list Default: aaaaa;bbbbbb   # Libraries black list
+# Setting: messages.Outdate-Client Default: 过时的客户端! 请使用 {0}   # Outdate Client
+# Setting: consolecolor.trace-level Default: c   # consolecolor.trace-level
+# Setting: messages.use-unknow-command Default: 未知命令。输入"/help"以获得帮助。   # Prompt unknown command
+# Setting: mohist.server-type Default: FML   # Set the server type displayed in motd (FML/BUKKIT/VANILLA)
+# Setting: consolecolor.fatal-time Default: b   # consolecolor.fatal-time
+# Setting: mohist.lang Default: xx_XX   # Mohist internationalization language setting, will return the default system language when your settings are invalid
+# Setting: forge.modswhitelist.list Default: aaaaa;bbbbbb   # mods white-list
+# Setting: keep-spawn-loaded Default: true   # Keep spawn chunk loaded
+# Setting: settings.min-chunk-load-threads Default: 2   # Keep people from doing stupid things with max of 6
+# Setting: forge.disable_mods_whitelist Default: false   # Disable the mods whitelist to let your players to go on your servers with others mods.
+# Setting: consolecolor.info-msg Default: f   # consolecolor.info-msg
+# Setting: messages.Rejections-Hack Default: Hack rejections %s   # Hack rejections
+# Setting: consolecolor.error-level Default: c   # consolecolor.error-level
+# Setting: mohist.console_name Default: Server   # Front of the console, for example /say
+# Setting: consolecolor.error-msg Default: c   # consolecolor.error-msg
+# Setting: mohist.fail-on-unresolved-gameprofile Default: true   # Prevent joining players when their GameProfile is unresolved, should be enabled at online-mode servers. Disabling it fixes problem with offline-mode bungee servers are unjoinable when Mojang api is dead. (https://github.com/Mohist-Community/Mohist/issues/253)
+# Setting: plugin.promptBug Default: false   # Prompt for possible vulnerabilities of some plugins
+# Setting: consolecolor.info-level Default: 2   # consolecolor.info-level
+# Setting: mohist.CloseChatInConsole Default: false   # Player's chat info will not be recorded in the console after opening
+# Setting: mohist.check_libraries Default: true   # Check libraries
+# Setting: forge.version.revision Default: 5   # forge.version.revision
+# Setting: consolecolor.warn-time Default: b   # consolecolor.warn-time
+# Setting: messages.Requirements-Mod-Version Default: version %s   # version X
+# Setting: messages.Requirements-Mod-Invalid-version Default: Requires %s but client has %s.   # Requires mod version X but mod is not found on client
+# Setting: disable-announce-Advancements Default: false   # Turn off achievment notifications
+# Setting: consolecolor.fatal-msg Default: c   # consolecolor.fatal-msg
+# Setting: consolecolor.error-time Default: b   # consolecolor.warn-time
+# Setting: messages.Rejections-Server-Mods Default: Server Mod rejections: 
+# %s   # Server-mods rejections
+# Setting: mohist.support_nocmd Default: false   # Some server tools do not recognize I18N
+# Setting: consolecolor.trace-time Default: b   # consolecolor.trace-time
+# Setting: world.stopserversaveworlds Default: false   # stopserversaveworlds
+# Setting: consolecolor.fatal-level Default: c   # consolecolor.fatal-level
+# Setting: forge.version.minor Default: 23   # forge.version.minor
+# Setting: forge.version.major Default: 14   # forge.version.major
+# Setting: forge.version.build Default: 2854   # forge.version.build
+# Setting: forge.disablechunkforcesystem Default: false   # Disable ForgeChunkForceSystem
+# Setting: consolecolor.warn-msg Default: e   # consolecolor.warn-msg
+# Setting: mohist.disable_mods_blacklist Default: false   # Disable mods blacklist. The blacklist contains mods which not working on Mohist
+# Setting: mohist.disable_plugins_blacklist Default: false   # Disable plugins blacklist. The blacklist contains plugin which not working on Mohist
+# Setting: consolecolor.warn-level Default: e   # consolecolor.warn-level
+# Setting: messages.Outdate-Server Default: 过时的服务端，服务端依然处在 {0} 版本   # Outdate Server
+# Setting: messages.Requirements-Mod-Version-range Default: version range %s   # version range X
+# Setting: fake-players.do-login Default: false   # Raise login events for fake players
+# Setting: mohist.check_update_auto_download Default: false   # Check new version will download automatically
+# Setting: mohist.realtimeticking Default: false   # RealTimeTicking from sponge
+# Setting: messages.Requirements-Mod-Not-found Default: Requires %s but mod is not found on client.   # Requires mod version X but mod is not found on client
+# Setting: consolecolor.trace-msg Default: c   # consolecolor.trace-msg
+
+entity-tick-limit: 300
+hidejoinmodslist: false
+forge:
+  modswhitelist:
+    kickmessage: Use of unauthorized mods
+    list: aaaaa;bbbbbb
+  disable_mods_whitelist: false
+  version:
+    revision: 5
+    minor: 23
+    major: 14
+    build: 2854
+  disablechunkforcesystem: false
+  autounloadWorld_whitelist:
+  - 0
+  - 1
+  - -1
+  modsblacklist:
+    list: []
+    kickmessage: Use of unauthorized mods
+mohist:
+  check_update: true
+  server-type: FML
+  lang: xx_XX
+  console_name: Server
+  fail-on-unresolved-gameprofile: true
+  CloseChatInConsole: false
+  check_libraries: true
+  support_nocmd: false
+  disable_mods_blacklist: false
+  disable_plugins_blacklist: false
+  check_update_auto_download: false
+  realtimeticking: false
+eventCanceled:
+  explosion: false
+consolecolor:
+  info-time: b
+  trace-level: c
+  fatal-time: b
+  info-msg: r
+  error-level: c
+  error-msg: c
+  info-level: '2'
+  warn-time: b
+  fatal-msg: c
+  error-time: b
+  trace-time: b
+  fatal-level: c
+  warn-msg: '3'
+  warn-level: '2'
+  trace-msg: c
+libraries_black_list: aaaaa;bbbbbb
+messages:
+  Outdate-Client: 过时的客户端! 请使用 {0}
+  use-unknow-command: 未知命令。输入"/help"以获得帮助。
+  Rejections-Hack: Hack rejections %s
+  Requirements-Mod-Version: version %s
+  Requirements-Mod-Invalid-version: Requires %s but client has %s.
+  Rejections-Server-Mods: "Server Mod rejections: \n%s"
+  Outdate-Server: 过时的服务端，服务端依然处在 {0} 版本
+  Requirements-Mod-Version-range: version range %s
+  Requirements-Mod-Not-found: Requires %s but mod is not found on client.
+keep-spawn-loaded: true
+settings:
+  min-chunk-load-threads: 2
+plugin:
+  promptBug: false
+disable-announce-Advancements: false
+world:
+  stopserversaveworlds: false
+  dimensionsNotLoaded: []
+fake-players:
+  do-login: false
+config-version: 2
+CloseChatInConsole: false

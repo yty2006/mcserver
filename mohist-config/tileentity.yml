@@ -1,0 +1,7 @@
+# This is the main configuration file for TileEntities.
+# Use carefully, it may break some mechanics
+# Setting: settings.skip-tileentity-ticks Default: true   # If enabled, turns on tileentity tick skip feature.
+
+settings:
+  skip-tileentity-ticks: true
+config-version: 1

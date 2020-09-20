@@ -1,0 +1,9 @@
+# This is the main configuration file for Entities.
+# Use carefully, it may break some mechanics
+# Setting: settings.skip-entity-ticks Default: true   # If enabled, turns on entity tick skip feature.
+# Setting: settings.skip-activation-range Default: false   # If enabled, skips entity activation range checks.
+
+settings:
+  skip-entity-ticks: true
+  skip-activation-range: false
+config-version: 1

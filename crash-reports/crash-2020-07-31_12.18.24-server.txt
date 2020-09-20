@@ -1,0 +1,123 @@
+---- Mohist 崩溃报告 ----
+
+WARNING: coremods are present:
+  CXLibraryCore (CXLibrary.jar)
+  Inventory Tweaks Coremod (Inventory Tweaks.jar)
+Contact their authors BEFORE contacting forge
+
+
+
+崩溃时间: 20-7-31 下午12:18
+描述: 服务器在进行tick循环时发生异常 (Exception in server tick loop)
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Manaita Plus (manaita_plus)
+Caused by: java.lang.NoClassDefFoundError: net/minecraft/client/util/ITooltipFlag
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Unknown Source)
+	at java.lang.Class.getConstructor0(Unknown Source)
+	at java.lang.Class.getConstructor(Unknown Source)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.register(EventBus.java:127)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.register(EventBus.java:111)
+	at rikuto.manaita_plus.ManaitaPlus.init(ManaitaPlus.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:632)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:215)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:193)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.Subscriber.invokeSubscriberMethod(Subscriber.java:91)
+	at com.google.common.eventbus.Subscriber$SynchronizedSubscriber.invokeSubscriberMethod(Subscriber.java:150)
+	at com.google.common.eventbus.Subscriber$1.run(Subscriber.java:76)
+	at com.google.common.util.concurrent.MoreExecutors$DirectExecutor.execute(MoreExecutors.java:399)
+	at com.google.common.eventbus.Subscriber.dispatchEvent(Subscriber.java:71)
+	at com.google.common.eventbus.Dispatcher$PerThreadQueuedDispatcher.dispatch(Dispatcher.java:116)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:217)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:132)
+	at net.minecraftforge.fml.common.Loader.initializeMods(Loader.java:752)
+	at net.minecraftforge.fml.server.FMLServerHandler.finishServerLoading(FMLServerHandler.java:111)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStarted(FMLCommonHandler.java:334)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:265)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:590)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: net.minecraft.client.util.ITooltipFlag
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 42 more
+Caused by: java.lang.NullPointerException
+
+
+错误的详细信息，其代码路径和所有已知的细节如下所示:
+---------------------------------------------------------------------------------------
+
+-- 系统详情 --
+Details:
+	Mohist版本: 1.12.2-1.12.2-b704e64
+	操作系统: Windows 10 (amd64) 版本 10.0
+	JAVA版本: 1.8.0_251, Oracle Corporation
+	JAVA虚拟机版本: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	内存: 304222272 bytes (290 MB) / 489160704 bytes (466 MB) up to 827850752 bytes (789 MB)
+	JAVA虚拟机参数: 2 total; -Xms256M -Xmx888M
+	内部缓存: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	CraftBukkit信息: 
+   Running: Mohist version git-Mohist-1.12.2-b704e64 (MC: 1.12.2) (Implementing API version 1.12.2-R0.1-SNAPSHOT) false
+   Plugins: {}
+   Warnings: DEFAULT
+   Reload Count: 0
+   Threads: { RUNNABLE TerminalConsoleWriter - 2: [java.io.FileOutputStream.writeBytes(Native Method), java.io.FileOutputStream.write(Unknown Source), java.io.BufferedOutputStream.flushBuffer(Unknown Source), java.io.BufferedOutputStream.flush(Unknown Source), java.io.PrintStream.write(Unknown Source), java.io.PrintStream.write(Unknown Source), org.fusesource.jansi.AnsiOutputStream.write(AnsiOutputStream.java:82), java.io.FilterOutputStream.write(Unknown Source), java.io.PrintStream.write(Unknown Source), java.io.FilterOutputStream.write(Unknown Source), org.bukkit.craftbukkit.v1_12_R1.util.TerminalConsoleWriterThread.run(TerminalConsoleWriterThread.java:47), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], RUNNABLE [Manaita Plus]update check: [java.net.DualStackPlainSocketImpl.connect0(Native Method), java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source), java.net.AbstractPlainSocketImpl.doConnect(Unknown Source), java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source), java.net.AbstractPlainSocketImpl.connect(Unknown Source), java.net.PlainSocketImpl.connect(Unknown Source), java.net.SocksSocketImpl.connect(Unknown Source), java.net.Socket.connect(Unknown Source), sun.security.ssl.SSLSocketImpl.connect(Unknown Source), sun.security.ssl.BaseSSLSocketImpl.connect(Unknown Source), sun.net.NetworkClient.doConnect(Unknown Source), sun.net.www.http.HttpClient.openServer(Unknown Source), sun.net.www.http.HttpClient.openServer(Unknown Source), sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source), sun.net.www.protocol.https.HttpsClient.New(Unknown Source), sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source), sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source), sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source), sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source), sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source), sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source), sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source), java.net.URL.openStream(Unknown Source), rikuto.manaita_plus.util.Update$1.run(Update.java:44)], RUNNABLE DestroyJavaVM: [], RUNNABLE Signal Dispatcher: [], RUNNABLE Netty Server IO #0: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:732), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:388), io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858), java.lang.Thread.run(Unknown Source)], TIMED_WAITING ForkJoinPool.commonPool-worker-1: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.ForkJoinPool.awaitWork(Unknown Source), java.util.concurrent.ForkJoinPool.runWorker(Unknown Source), java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)], RUNNABLE Server console handler: [java.io.FileInputStream.readBytes(Native Method), java.io.FileInputStream.read(Unknown Source), java.io.BufferedInputStream.fill(Unknown Source), java.io.BufferedInputStream.read(Unknown Source), jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:245), jline.internal.InputStreamReader.read(InputStreamReader.java:257), jline.internal.InputStreamReader.read(InputStreamReader.java:194), jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2136), jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2126), jline.console.ConsoleReader.readLineSimple(ConsoleReader.java:3228), jline.console.ConsoleReader.readLine(ConsoleReader.java:2441), jline.console.ConsoleReader.readLine(ConsoleReader.java:2372), jline.console.ConsoleReader.readLine(ConsoleReader.java:2360), jline.console.ConsoleReader.readLine(ConsoleReader.java:2348), net.minecraft.server.dedicated.DedicatedServer$2.run(DedicatedServer.java:124)], WAITING ForkJoinPool.commonPool-worker-5: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.ForkJoinPool.awaitWork(Unknown Source), java.util.concurrent.ForkJoinPool.runWorker(Unknown Source), java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)], TIMED_WAITING Craft Scheduler Thread - 3: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Craft Scheduler Thread - 2: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Craft Scheduler Thread - 0: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], WAITING Reference Handler: [java.lang.Object.wait(Native Method), java.lang.Object.wait(Unknown Source), java.lang.ref.Reference.tryHandlePending(Unknown Source), java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)], WAITING Snooper Timer: [java.lang.Object.wait(Native Method), java.lang.Object.wait(Unknown Source), java.util.TimerThread.mainLoop(Unknown Source), java.util.TimerThread.run(Unknown Source)], RUNNABLE Attach Listener: [], TIMED_WAITING Server Infinisleeper: [java.lang.Thread.sleep(Native Method), net.minecraft.server.dedicated.DedicatedServer$1.run(DedicatedServer.java:96)], TIMED_WAITING Craft Scheduler Thread - 1: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.parkNanos(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(Unknown Source), java.util.concurrent.SynchronousQueue$TransferStack.transfer(Unknown Source), java.util.concurrent.SynchronousQueue.poll(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], WAITING ForkJoinPool.commonPool-worker-4: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.ForkJoinPool.awaitWork(Unknown Source), java.util.concurrent.ForkJoinPool.runWorker(Unknown Source), java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)], WAITING ForkJoinPool.commonPool-worker-2: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.ForkJoinPool.awaitWork(Unknown Source), java.util.concurrent.ForkJoinPool.runWorker(Unknown Source), java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)], TIMED_WAITING Mohist Watchdog Thread: [java.lang.Thread.sleep(Native Method), org.spigotmc.WatchdogThread.run(WatchdogThread.java:92)], WAITING Finalizer: [java.lang.Object.wait(Native Method), java.lang.ref.ReferenceQueue.remove(Unknown Source), java.lang.ref.ReferenceQueue.remove(Unknown Source), java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)], RUNNABLE Server thread: [java.lang.Thread.dumpThreads(Native Method), java.lang.Thread.getAllStackTraces(Unknown Source), org.bukkit.craftbukkit.v1_12_R1.CraftCrashReport.call(CraftCrashReport.java:27), net.minecraft.crash.CrashReportCategory.func_189529_a(CrashReportCategory.java:96), net.minecraft.crash.CrashReport.func_71504_g(CrashReport.java:121), net.minecraft.crash.CrashReport.<init>(CrashReport.java:42), net.minecraft.server.MinecraftServer.run(MinecraftServer.java:653), java.lang.Thread.run(Unknown Source)], WAITING Mohist Async Task Handler Thread - 1: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.park(Unknown Source), java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source), java.util.concurrent.LinkedBlockingQueue.take(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)],}
+   
+	FML: MCP 9.42 Powered by Forge 14.23.5.2854 25 mods loaded, 25 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID                    | Version                      | Source                                | Signature                                |
+	|:----- |:--------------------- |:---------------------------- |:------------------------------------- |:---------------------------------------- |
+	| LCHI  | minecraft             | 1.12.2                       | minecraft.jar                         | None                                     |
+	| LCHI  | mcp                   | 9.42                         | minecraft.jar                         | None                                     |
+	| LCHI  | mohist                | 1.12.2-b704e64               | mohist.jar                            | None                                     |
+	| LCHI  | FML                   | 8.0.99.99                    | forge.jar                             | None                                     |
+	| LCHI  | forge                 | 14.23.5.2854                 | forge.jar                             | None                                     |
+	| LCHI  | damageindicatorsmod   | 1.0                          | [1.12.2]DamageIndicatorsMod-3.5.1.jar | None                                     |
+	| LCHI  | autopickup            | 2.4.4                        | AutoPickup.jar                        | None                                     |
+	| LCHI  | codechickenlib        | 3.2.3.358                    | CodeChicken Lib(前置).jar               | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCHI  | avaritia              | 3.2.0                        | Avaritia.jar                          | None                                     |
+	| LCHI  | cxlibrary             | 1.6.1                        | CXLibrary.jar                         | None                                     |
+	| LCHI  | dmonsters             | 1.7                          | Deadly Monsters.jar                   | None                                     |
+	| LCHI  | inventorytweaks       | 1.64-dev+release.110.b4fac73 | Inventory Tweaks.jar                  | 55d2cd4f5f0961410bf7b91ef6c6bf00a766dcbe |
+	| LCHI  | jei                   | 4.15.0.275                   | Just Enough Items.jar                 | None                                     |
+	| LCHI  | lootbags              | 2.5.7                        | Loot Bags.jar                         | None                                     |
+	| LCHI  | lucky                 | 7.5.0                        | Lucky Block.jar                       | None                                     |
+	| LCHE  | manaita_plus          | 1.0.1                        | Manaita+Plus-1.12.2-1.0.1.jar         | None                                     |
+	| LCH   | mantle                | 1.12-1.3.3.39                | Mantel(前置).jar                        | None                                     |
+	| LCH   | metamorph             | 1.1.4                        | Metamorph.jar                         | None                                     |
+	| LCH   | mobends               | 0.24                         | Mo' Bends.jar                         | None                                     |
+	| LCH   | morefurnaces          | 1.10.5                       | More Furnaces.jar                     | None                                     |
+	| LCH   | oreexcavation         | 1.4.119                      | OreExcavation.jar                     | None                                     |
+	| LCH   | projecte              | 1.12-PE1.0.0                 | ProjectE.jar                          | None                                     |
+	| LCH   | flammpfeil.slashblade | mc1.12-r31                   | SlashBlade.jar                        | None                                     |
+	| LCH   | slashblade_addon      | 1.0.7                        | SlashBlade(日系附属包.jar                  | None                                     |
+	| LCH   | twilightforest        | 3.7.424                      | The Twilight Forest.jar               | None                                     |
+
+	Loaded coremods (and transformers): 
+CXLibraryCore (CXLibrary.jar)
+  cubex2.cxlibrary.CoreModTransformer
+Inventory Tweaks Coremod (Inventory Tweaks.jar)
+  invtweaks.forge.asm.ContainerTransformer
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 2; []
+	Is Modded: Definitely; Server brand changed to 'Mohist'
+	Type: Dedicated Server (map_server.txt)
